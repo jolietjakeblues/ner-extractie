@@ -14,6 +14,22 @@ Dit project bevat een Python-script (`ner_extract_terms_spacy.py`) voor het auto
 
 Het resultaat is een extra kolom met termen die geschikt zijn voor analyse, matching of verdere verrijking.
 
+**Installatie**
+
+1. Zorg dat Python 3.10 of hoger is geïnstalleerd.
+2. Installeer de vereiste pakketten:
+
+```bash
+pip install -r requirements.txt
+```
+
+Of handmatig:
+
+```bash
+pip install spacy pandas openpyxl tqdm
+python -m spacy download nl_core_news_md
+```
+
 **Gebruik**
 
 U kunt het script draaien via de terminal met interactieve prompts, of met commando-opties zoals hieronder:
@@ -61,6 +77,19 @@ Duur: 0.5 s
 Logbestand: verwerkingslog_...txt
 ```
 
+**Bekende beperkingen**
+
+* Alleen getest met Nederlandstalige teksten
+* Werkt het best met goed gestructureerde zinnen
+* Geen automatische semantische disambiguatie
+
+**Toekomstige uitbreidingen (TODO)**
+
+* Koppeling met een externe thesaurus via SPARQL/API
+* Ondersteuning voor synoniemenlijsten
+* Output als RDF of JSON-LD
+* Meerdere kolommen tegelijk verwerken
+
 **Licentie**
 
 Iedereen mag dit script gebruiken, kopiëren, wijzigen en verspreiden. Geen rechten voorbehouden.
@@ -80,6 +109,21 @@ This repository contains `ner_extract_terms_spacy.py`, a script to extract meani
 * Regex for centuries and date ranges
 * Manual thesaurus enrichment
 * Filtering of short/unwanted tokens
+
+**Installation**
+
+Make sure you have Python 3.10+ installed. Then install the dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Or manually:
+
+```bash
+pip install spacy pandas openpyxl tqdm
+python -m spacy download nl_core_news_md
+```
 
 **Usage**
 Run interactively or with CLI options like:
@@ -113,6 +157,19 @@ Output column: ner_terms
 Saved as: example_output.csv
 Filtered rows logged.
 ```
+
+**Known limitations**
+
+* Designed for Dutch-language texts only
+* Relies on well-formed input sentences
+* No semantic disambiguation
+
+**Future ideas (TODO)**
+
+* SPARQL/API integration with external thesauri
+* Synonym support
+* Export as RDF or JSON-LD
+* Multi-column processing
 
 **License**
 
