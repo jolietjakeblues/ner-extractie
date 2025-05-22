@@ -1,0 +1,13 @@
+# Zorg voor consistente UTF-8-bestandscodering
+* text=auto eol=lf
+*.py text diff=python
+*.md text
+*.csv text
+*.txt text
+*.json text
+
+# Excel-bestanden binaire diff
+*.xlsx binary
+
+# Unicode normalisatie (indien nodig)
+*.txt text working-tree-encoding=UTF-8

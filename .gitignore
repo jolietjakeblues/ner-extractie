@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Logbestanden
+*.log
+verwerkingslog_*.txt
+gefilterd_*.txt
+
+# Outputbestanden
+*_output.csv
+*_output.xlsx
+
+# IDE / Editor
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Systeem
+.DS_Store
+Thumbs.db
+
+# Python virtual environment
+venv/
+.env/
