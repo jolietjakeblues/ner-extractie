@@ -1,5 +1,8 @@
 # ner-extractie
 
+![Python version](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
+![License: Unlicense](https://img.shields.io/badge/license-Unlicense-lightgrey)
+
 **Beschrijving (Nederlands)**
 
 Dit project bevat een Python-script (`ner_extract_terms_spacy.py`) voor het automatisch extraheren van betekenisvolle termen uit Nederlandstalige tekstbestanden, zoals beschrijvingen van erfgoedobjecten. Het script gebruikt:
@@ -34,6 +37,30 @@ De resultaten worden opgeslagen in een nieuw bestand in dezelfde map. Bestandsna
 
 Gefilterde rijen (waarbij alles werd verwijderd) worden gelogd in een apart .txt-bestand.
 
+**Voorbeeldbestand**
+
+U kunt starten met `example.csv`, een voorbeeldbestand dat drie eenvoudige beschrijvingen bevat.
+
+**Screenshot terminaloutput**
+
+```
+Kolommen in uw bestand:
+[0] rijksmonument
+[1] nummer
+[2] omschrijving
+
+Kies het nummer van de kolom die u wilt analyseren:
+(typ alleen het cijfer en druk op Enter): 2
+Hoe moet de nieuwe kolom met resultaten heten? [druk op Enter]: ner_terms
+Wilt u ook entiteiten meenemen? [Enter=ja]:
+Wilt u omzetten naar kleine letters? [Enter=ja]:
+Wilt u sorteren? [Enter=ja]:
+Verwerken gestart...
+Rijen: 3
+Duur: 0.5 s
+Logbestand: verwerkingslog_...txt
+```
+
 **Licentie**
 
 Iedereen mag dit script gebruiken, kopiëren, wijzigen en verspreiden. Geen rechten voorbehouden.
@@ -43,6 +70,9 @@ Iedereen mag dit script gebruiken, kopiëren, wijzigen en verspreiden. Geen rech
 ---
 
 **Description (English)**
+
+![Python version](https://img.shields.io/badge/Python-3.10%2B-blue?logo=python)
+![License: Unlicense](https://img.shields.io/badge/license-Unlicense-lightgrey)
 
 This repository contains `ner_extract_terms_spacy.py`, a script to extract meaningful terms from Dutch text (e.g. heritage descriptions) using:
 
@@ -70,6 +100,19 @@ python ner_extract_terms_spacy.py --file mydata.csv --kolom 3 --output ner_terms
 * `--csv` force CSV output (default: Excel for .xlsx input)
 
 Filtered-out rows are logged separately. Output is saved with a unique filename.
+
+**Sample data**
+See `example.csv` for a 3-row test file.
+
+**Terminal screenshot**
+
+```
+Processing started...
+Extracting from column: omschrijving
+Output column: ner_terms
+Saved as: example_output.csv
+Filtered rows logged.
+```
 
 **License**
 
