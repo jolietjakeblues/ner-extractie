@@ -38,6 +38,14 @@ U kunt het script draaien via de terminal met interactieve prompts, of met comma
 python ner_extract_terms_spacy.py --file mijndata.csv --kolom 3 --output ner_terms \
   --entiteiten --kleine_letters --sorteer --csv
 ```
+**Let op (Windows gebruikers)**
+
+- Voer de volledige opdracht **op één regel** uit, zonder `\`.
+- Gebruik geen extra argumenten zoals `--profile`, tenzij ondersteund door het script.
+- Voorbeeld (werkt altijd):
+
+```bash
+python ner_extract_terms_spacy.py --file mijndata.csv --kolom 3 --output ner_terms --entiteiten --kleine_letters --sorteer --csv
 
 **Argumenten**
 
