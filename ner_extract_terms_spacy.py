@@ -161,7 +161,7 @@ def main():
         if output_ext == ".xlsx":
             df.to_excel(output_file, index=False)
         else:
-            df.to_csv(output_file, encoding="utf-8", index=False, sep=sep or ',')
+            df.to_csv(output_file, encoding="utf-8", index=False, sep=sep or ';')
         print(f"\nBestand opgeslagen als: {output_file}")
     except Exception as e:
         print(f"Fout bij opslaan: {e}")
