@@ -47,6 +47,11 @@ python ner_extract_terms_spacy.py --file mijndata.csv --kolom 3 --output ner_ter
 ```bash
 python ner_extract_terms_spacy.py --file mijndata.csv --kolom 3 --output ner_terms --entiteiten --kleine_letters --sorteer --csv
 
+**CSV-output op Windows**
+
+Het script gebruikt standaard het scheidingsteken `;` in CSV-bestanden.
+Hierdoor opent het resultaat direct correct in Excel (zonder dat alle tekst in één kolom terechtkomt).
+
 **Argumenten**
 
 * `--file` pad naar CSV of Excel-bestand
